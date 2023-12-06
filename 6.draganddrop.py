@@ -14,7 +14,8 @@ def main(page: ft.Page):
 
     def drag_will_accept(e):
         e.control.content.border = ft.border.all(
-            width=2, color=ft.colors.BLACK45 if e.data == "true" else ft.colors.RED
+            width=2,
+            color=ft.colors.BLACK45 if e.data == "true" else ft.colors.RED,
         )
         e.control.update()
 
@@ -56,7 +57,7 @@ def main(page: ft.Page):
                     ),
                     on_accept=drag_accept,
                     on_will_accept=drag_will_accept,
-                    on_leave=drag_leave
+                    on_leave=drag_leave,
                 ),
             ]
         )
